@@ -1,0 +1,153 @@
+{
+	"info": {
+		"_postman_id": "443ac26b-e65a-4412-a818-3b45cccee8a8",
+		"name": "infinispan-test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19230158"
+	},
+	"item": [
+		{
+			"name": "get key",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/cache/userkey1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cache",
+						"userkey1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get key spring",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/cache/spring/Biba",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cache",
+						"spring",
+						"Biba"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "modify entry spring",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/cache/spring/Biba",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cache",
+						"spring",
+						"Biba"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "save",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"key\" : \"key1\",\r\n    \"value\" : \"{\\\"id\\\":1,\\\"name\\\":\\\"Biba\\\",\\\"email\\\":\\\"bibabobovich@gmail.com\\\"}\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/cache/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cache",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "save user",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"key\" : \"Biba2\",\r\n    \"value\" : \"value1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/cache/user",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cache",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "save with exp",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"key\" : \"userkey2\",\r\n    \"value\" : \"value2\",\r\n    \"expiration\" : 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/cache/user",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cache",
+						"user"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
